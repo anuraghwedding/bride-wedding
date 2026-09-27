@@ -500,10 +500,10 @@ const HOME_PAGES = [
     "saveTheDate",
     "meetCouple",
     "ourJourney",
-    "capturedMoments",
+    
     "event-schedule",
     "our-venues",
-    "family",
+    
     "contact",
     "footer"
 ];

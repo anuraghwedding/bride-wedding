@@ -408,6 +408,22 @@
 }
 
 
+.page-content.text-only {
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding-top: 34px;
+}
+
+
+.page-content.text-only .story-text {
+    width: 100%;
+
+    max-width: 620px;
+}
+
+
 .story-text {
     position: relative;
 
