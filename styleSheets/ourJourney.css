@@ -1515,3 +1515,58 @@
     }
 
 }
+
+.journey-scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, 14px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.journey-scroll-hint.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.journey-scroll-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #ead29c;
+}
+
+.journey-scroll-sub {
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(232, 207, 155, .75);
+}
+
+.journey-scroll-arrow {
+    font-size: 18px;
+    line-height: 1;
+    color: #d6ae5f;
+}
+
+.journey-scroll-hint.is-visible .journey-scroll-arrow {
+    animation: journeyArrowBob 1.8s ease-in-out infinite;
+}
+
+@keyframes journeyArrowBob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(6px); }
+}
+
+@media (max-width: 768px) {
+    .journey-scroll-hint { bottom: 20px; }
+    .journey-scroll-text { font-size: 9px; letter-spacing: 3px; }
+    .journey-scroll-sub  { font-size: 12px; }
+}
